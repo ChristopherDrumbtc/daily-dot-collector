@@ -67,17 +67,71 @@ export const AREA_TEMPLATES = {
   }
 };
 
-export const DEFAULT_ACTIVITIES = [
-  { id: 'coldcall', name: 'Cold Call', icon: '📞' },
-  { id: 'deepwork', name: 'Deep Work', icon: '🧠' },
-  { id: 'workout', name: 'Workout', icon: '🏋️' },
-  { id: 'reading', name: 'Lettura', icon: '📖' },
-  { id: 'content', name: 'Contenuti', icon: '🎬' },
-  { id: 'networking', name: 'Networking', icon: '🤝' },
-  { id: 'learning', name: 'Studio', icon: '📚' },
-  { id: 'sales', name: 'Vendita/Demo', icon: '🖥️' },
-  { id: 'meditation', name: 'Meditazione', icon: '🧘' },
-  { id: 'journaling', name: 'Journaling', icon: '✍️' },
+export const ACTIVITY_CATEGORIES = [
+  {
+    label: 'Lavoro & Produttività',
+    items: [
+      { id: 'deepwork', name: 'Deep Work', icon: '🧠' },
+      { id: 'meetings', name: 'Meeting', icon: '💬' },
+      { id: 'emails', name: 'Email & Admin', icon: '📧' },
+      { id: 'planning', name: 'Pianificazione', icon: '📋' },
+      { id: 'creative', name: 'Lavoro Creativo', icon: '🎨' },
+      { id: 'coding', name: 'Coding', icon: '💻' },
+      { id: 'writing', name: 'Scrittura', icon: '✍️' },
+    ]
+  },
+  {
+    label: 'Corpo & Salute',
+    items: [
+      { id: 'workout', name: 'Allenamento', icon: '🏋️' },
+      { id: 'running', name: 'Corsa / Cardio', icon: '🏃' },
+      { id: 'walk', name: 'Camminata', icon: '🚶' },
+      { id: 'cooking', name: 'Cucina sana', icon: '🥗' },
+      { id: 'sleep', name: 'Sonno 7h+', icon: '😴' },
+      { id: 'noalcohol', name: 'Zero alcol', icon: '🚫' },
+    ]
+  },
+  {
+    label: 'Mente & Crescita',
+    items: [
+      { id: 'reading', name: 'Lettura', icon: '📖' },
+      { id: 'learning', name: 'Studio / Corso', icon: '📚' },
+      { id: 'meditation', name: 'Meditazione', icon: '🧘' },
+      { id: 'journaling', name: 'Journaling', icon: '📝' },
+      { id: 'podcast', name: 'Podcast', icon: '🎧' },
+      { id: 'nophone', name: 'Digital Detox', icon: '📵' },
+    ]
+  },
+  {
+    label: 'Relazioni & Social',
+    items: [
+      { id: 'family', name: 'Tempo famiglia', icon: '👨‍👩‍👧' },
+      { id: 'friends', name: 'Tempo amici', icon: '🍻' },
+      { id: 'networking', name: 'Networking', icon: '🤝' },
+      { id: 'date', name: 'Coppia / Date', icon: '❤️' },
+      { id: 'helping', name: 'Aiutare qualcuno', icon: '🫶' },
+    ]
+  },
+  {
+    label: 'Business & Vendita',
+    items: [
+      { id: 'coldcall', name: 'Cold Call', icon: '📞' },
+      { id: 'sales', name: 'Vendita / Demo', icon: '🖥️' },
+      { id: 'content', name: 'Contenuti Social', icon: '🎬' },
+      { id: 'outreach', name: 'Outreach', icon: '📡' },
+      { id: 'clients', name: 'Gestione Clienti', icon: '💼' },
+    ]
+  },
+  {
+    label: 'Tempo Libero',
+    items: [
+      { id: 'hobby', name: 'Hobby', icon: '🎯' },
+      { id: 'music', name: 'Musica', icon: '🎵' },
+      { id: 'gaming', name: 'Gaming', icon: '🎮' },
+      { id: 'nature', name: 'Natura / Aria aperta', icon: '🌿' },
+      { id: 'travel', name: 'Viaggio / Gita', icon: '✈️' },
+    ]
+  },
 ];
 
 // Helpers
