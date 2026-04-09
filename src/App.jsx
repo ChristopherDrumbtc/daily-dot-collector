@@ -57,8 +57,9 @@ function MainApp({ user }) {
   const setText = (f, v) => upd(f, v);
 
   const toggleActivity = (id) => {
-    const cur = entry.activities || {};
-    upd('activities', { ...cur, [id]: cur[id] ? undefined : true });
+    const cur = { ...(entry.activities || {}) };
+    if (cur[id]) { delete cur[id]; } else { cur[id] = true; }
+    upd('activities', cur);
   };
 
   const addIssue = () => {
