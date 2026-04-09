@@ -11,6 +11,20 @@ export function useStore(userId) {
   dataRef.current = data;
   const debounceRef = useRef(null);
 
+  // Firestore rejects undefined values — strip them recursively
+  const clean = (obj) => {
+    if (obj === null || obj === undefined) return null;
+    if (Array.isArray(obj)) return obj.map(clean);
+    if (typeof obj === 'object') {
+      const out = {};
+      for (const [k, v] of Object.entries(obj)) {
+        if (v !== undefined) out[k] = clean(v);
+      }
+      return out;
+    }
+    return obj;
+  };
+
   useEffect(() => {
     if (!userId) return;
     let cancelled = false;
@@ -43,7 +57,7 @@ export function useStore(userId) {
       setSaving(true);
       setError(null);
       try {
-        await setDoc(doc(db, 'users', userId), d);
+        await setDoc(doc(db, 'users', userId), clean(d));
       } catch (e) {
         console.error('Save error:', e);
         setError('Salvataggio fallito. Riprova.');
@@ -56,7 +70,7 @@ export function useStore(userId) {
     if (!userId) return;
     setSaving(true);
     try {
-      await setDoc(doc(db, 'users', userId), dataRef.current);
+      await setDoc(doc(db, 'users', userId), clean(dataRef.current));
       setError(null);
     } catch (e) {
       setError('Salvataggio fallito.');
