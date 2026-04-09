@@ -2,19 +2,35 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#080810" />
-    <meta name="description" content="Daily Dot Collector — Misura la tua crescita ogni giorno con i principi di Ray Dalio" />
-    <title>Daily Dot Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#07070f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="Daily Dot Collector — Track your growth, close the loop, become relentlessly productive" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <title>Dot Collector</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: 'DM Sans', sans-serif; background: #080810; color: #e2e8f0; -webkit-font-smoothing: antialiased; }
-      input, textarea, select, button { font-family: 'DM Sans', sans-serif; }
-      ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: transparent; }
-      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 4px; }
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html { height: 100%; overflow: hidden; }
+      body {
+        font-family: 'Outfit', sans-serif;
+        background: #07070f;
+        color: #e0e4ec;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+      #root { height: 100%; }
+      input, textarea, select, button { font-family: 'Outfit', sans-serif; }
+      ::-webkit-scrollbar { width: 0; height: 0; }
+      ::selection { background: rgba(99,102,241,0.3); }
+      textarea { resize: none !important; }
+      input:focus, textarea:focus, select:focus { outline: none; }
     </style>
   </head>
   <body>
